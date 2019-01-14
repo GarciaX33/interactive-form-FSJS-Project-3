@@ -5,9 +5,9 @@ $(document).ready( function(){
   $('#name').focus();
 });
 
-/** ”Job Role” section **/
+/** Job Role section **/
 $(document).ready( function(){
-/** will hide other-title id upon page load **/
+/** will hide othertitle id upon page load **/
   $('#other-title').hide();
 });
 
@@ -18,7 +18,7 @@ $('#title').change( function() {
   }
 });
 
-/** ”T-Shirt Info” section **/
+/** T-Shirt Info section **/
 $(document).ready( function(){
 /** will hide colors-js-puns id upon page load **/
   $('#colors-js-puns').hide();
