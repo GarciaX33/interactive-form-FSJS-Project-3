@@ -10,7 +10,7 @@ $(document).ready( function(){
 /** will hide othertitle id upon page load **/
   $('#other-title').hide();
 });
-
+/** will have other title appear once other is clicked **/
 $('#title').change( function() {
 
   if ($(this).val() == "other") {
