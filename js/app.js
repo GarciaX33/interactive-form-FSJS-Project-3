@@ -58,11 +58,76 @@ $("input[name='js-frameworks']").on("click", function(){
    runningTotal = runningTotal + 100;
   $(".activities div").text("Total: $ " + runningTotal);
   /** will hide conflicting time event express **/
-  $("[name='express']").attr("disabled", "true").parent().fadeOut();
+  $("[name='express']").attr("disabled", "true").parent().hide();
   /** will unhide conf. time event and subtract 100 from runningTotal when unchecked **/
 } else {
   runningTotal = runningTotal - 100;
   $(".activities div").text("Total: $ " + runningTotal);
   $("[name='express']").removeAttr("disabled").parent().toggle()
 }
+});
+/** will add 100 to runningTotal on Express when checked **/
+$("input[name='express']").on("click", function(){
+  if($(this).is(":checked")){
+    runningTotal = runningTotal + 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    /** will hide conflicting time event JS frameworks **/
+    $("[name='js-frameworks']").attr("disabled", "true").parent().hide();
+    /** will unhide conf. time event and subtract 100 from runningTotal when unchecked **/
+    } else {
+    runningTotal = runningTotal - 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    $("[name='js-frameworks']").removeAttr("disabled").parent().toggle()
+    }
+});
+$("input[name='js-libs']").on("click", function(){
+  if($(this).is(":checked")){
+    runningTotal = runningTotal + 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    $("[name='node']").attr("disabled", "true").parent().hide();
+    } else {
+    runningTotal = runningTotal - 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    $("[name='node']").removeAttr("disabled").parent().toggle()
+    }
+});
+$("input[name='node']").on("click", function(){
+  if($(this).is(":checked")){
+    runningTotal = runningTotal + 100;
+    $(".activities div").text("Total Cost: " + runningTotal);
+    $("[name='js-libs']").attr("disabled", "true").parent().hide();
+    } else {
+    runningTotal = runningTotal - 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    $("[name='js-libs']").removeAttr("disabled").parent().toggle()
+    }
+});
+$("input[name='build-tools']").on("change", function(){
+  if($(this).is(":checked")){
+    runningTotal = runningTotal + 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    } else {
+    runningTotal = runningTotal - 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    }
+});
+
+$("input[name='npm']").on("click", function(){
+  if($(this).is(":checked")){
+    runningTotal = runningTotal + 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    } else {
+    runningTotal = runningTotal - 100;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    }
+});
+
+$("input[name='all']").on("click", function(){
+  if($(this).is(":checked")){
+    runningTotal = runningTotal + 200;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+    } else {
+    runningTotal = runningTotal - 200;
+    $(".activities div").text("Total Cost: $ " + runningTotal);
+  }
 });
