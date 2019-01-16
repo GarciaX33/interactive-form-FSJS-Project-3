@@ -240,13 +240,18 @@ $(document).ready(function() {
   });
 });
 
-
+$(document).submit(function(event){
+  if($('#cc-num').val() === ''){
+    alert('Check CC Number Before Submitting Please.');
+    return false
+  }
+});
 
 $(document).submit(function(event){
   if($('.activities input[type="checkbox"]:checked').length !== 0){
-    alert('Event(s) Registered.');
-  } else {
-    alert('Check minimum 1 Event Before Submitting Please.');
+    alert("Event(s) Confirmed");
+  } else{
+    alert('Check 1 Event before submitting');
     return false
   }
 });
