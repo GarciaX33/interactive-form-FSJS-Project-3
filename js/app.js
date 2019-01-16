@@ -249,7 +249,7 @@ $(document).submit(function(event){
 
 $(document).submit(function(event){
   if($('.activities input[type="checkbox"]:checked').length !== 0){
-    alert("Event(s) Confirmed");
+    alert("Event(s) checked");
   } else{
     alert('Check 1 Event before submitting');
     return false
@@ -259,6 +259,13 @@ $(document).submit(function(event){
 $(document).submit(function(event){
   if($('#zip').val() === ''){
     alert('Check Zip Before Submitting Please.');
+    return false
+  }
+});
+
+$(document).submit(function(event){
+  if($('#cvv').val() === ''){
+    alert('Check cvv Before Submitting Please.');
     return false
   }
 });
