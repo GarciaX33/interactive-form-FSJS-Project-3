@@ -239,9 +239,11 @@ $(document).ready(function() {
     }
   });
 });
+
+
 /** will make sure cc number is inputted and no alerts pop up before allowing submit **/
 $(document).submit(function(event){
-  if($('#cc-num').val() === ''){
+  if($('#cc-num').val() === '' && ($('#payment option[value="credit card"]:selected')).length !== 0){
     alert('Check CC Number Before Submitting Please.');
     return false
   }
@@ -257,14 +259,14 @@ $(document).submit(function(event){
 });
 /** will  make sure atleast zip is inputted before allowing form to submit **/
 $(document).submit(function(event){
-  if($('#zip').val() === ''){
+  if($('#zip').val() === '' && ($('#payment option[value="credit card"]:selected')).length !== 0){
     alert('Check Zip Before Submitting Please.');
     return false
   }
 });
 /** will  make sure cvv is inputted before allowing form to submit **/
 $(document).submit(function(event){
-  if($('#cvv').val() === ''){
+  if($('#cvv').val() === '' && ($('#payment option[value="credit card"]:selected')).length !== 0){
     alert('Check cvv Before Submitting Please.');
     return false
   }
