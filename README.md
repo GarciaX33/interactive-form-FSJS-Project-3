@@ -1,4 +1,4 @@
-# Interactive Form with Jquery Project 4 FSJS
+# Interactive Form with Jquery Project 3 FSJS
 
 ## Built With
 
@@ -9,4 +9,4 @@
 
 ## Authors
 
-* **Daniel Garcia** - *FSJS Project 4* - [GarciaX33](https://github.com/GarciaX33)
+* **Daniel Garcia** - *FSJS Project 3* - [GarciaX33](https://github.com/GarciaX33)
