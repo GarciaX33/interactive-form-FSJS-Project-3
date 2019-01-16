@@ -191,6 +191,7 @@ $(document).ready(function() {
   });
 });
 
+/** will make it so user needs to input ccnumber, if ccnumber is valid user can continue without alert **/
 
 $(document).ready(function() {
   $('#cc-num').focusout(function(){
