@@ -171,11 +171,11 @@ $(document).ready(function(){
   }
   });
 });
-
+/** function emailcheck with email regex **/
 function emailCheck(email) {
   return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email);
 }
-
+/** will make it so user needs to input email, if email is valid user can continue without alert **/
 $(document).ready(function() {
   $('#email').focusout(function(){
     if ( $( "input[name='user_email']" ).val() === "" ) {
@@ -239,14 +239,14 @@ $(document).ready(function() {
     }
   });
 });
-
+/** will make sure cc number is inputted and no alerts pop up before allowing submit **/
 $(document).submit(function(event){
   if($('#cc-num').val() === ''){
     alert('Check CC Number Before Submitting Please.');
     return false
   }
 });
-
+/** will  make sure atleast 1 event is checked before allowing form to submit **/
 $(document).submit(function(event){
   if($('.activities input[type="checkbox"]:checked').length !== 0){
     alert("Event(s) checked");
@@ -255,14 +255,14 @@ $(document).submit(function(event){
     return false
   }
 });
-
+/** will  make sure atleast zip is inputted before allowing form to submit **/
 $(document).submit(function(event){
   if($('#zip').val() === ''){
     alert('Check Zip Before Submitting Please.');
     return false
   }
 });
-
+/** will  make sure cvv is inputted before allowing form to submit **/
 $(document).submit(function(event){
   if($('#cvv').val() === ''){
     alert('Check cvv Before Submitting Please.');
