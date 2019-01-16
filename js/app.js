@@ -255,3 +255,10 @@ $(document).submit(function(event){
     return false
   }
 });
+
+$(document).submit(function(event){
+  if($('#zip').val() === ''){
+    alert('Check Zip Before Submitting Please.');
+    return false
+  }
+});
