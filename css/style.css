@@ -109,6 +109,10 @@ button {
 	cursor: pointer;
 }
 
+#color option:disabled {
+    display: none;
+}
+
 button:hover {
 	background: #184c62;
 }

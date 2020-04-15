@@ -1,6 +1,6 @@
 /** Set focus on the first text field **/
 $(document).ready( function(){
-/** will set focus on first textfield name id **/
+/** will set focus on the first textfield name id **/
   $('#name').focus();
 });
 
@@ -19,6 +19,8 @@ $('#title').change( function() {
   }
 });
 
+/** --------BUG 1------Theme - JS Puns color menu should only display cornflower blue, dark glate grey gold -----heart JS should only display tomato, steel blue, dim grey **/
+
 /** T-Shirt Info section **/
 $(document).ready( function(){
 /** will hide colors-js-puns id upon page load **/
@@ -26,12 +28,16 @@ $(document).ready( function(){
 });
 $('#design').change( function() {
   if ($(this).val() == "js puns") {
+      console.log($('#color option[value = cornflowerblue]'))
       $('#colors-js-puns').show();
       $('#color').val('cornflowerblue'); /** will start with cornflowerblue **/
       $('#color option[value = cornflowerblue]').show();
       $('#color option[value = darkslategrey]').show();
       $('#color option[value = gold]').show();
+      // For browsers that support hide()
       $('#color option[value = tomato]').hide();
+//      // For browsers that do not support hide() e.g. Safari
+//      $('#color option[value = tomato]').attr('disabled', 'disabled');
       $('#color option[value = steelblue]').hide();
       $('#color option[value = dimgrey]').hide();
   } else if ($(this).val() == "selectheme") {
@@ -157,6 +163,10 @@ $("input[name='all']").on("click", function(){
     $('#bitcoin').hide();
 	}
 });
+
+
+/** --------Bug 2-------page gets stuck in a alert when the name input is skipped **/
+
 
 /** Form Validation **/
 /** Name Field cant be blank **/
