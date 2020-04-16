@@ -36,7 +36,7 @@ $('#design').change( function() {
       $('#color option[value = gold]').show();
       // For browsers that support hide()
       $('#color option[value = tomato]').hide();
-//      // For browsers that do not support hide() e.g. Safari
+//      // -----For browsers that do not support hide() like Safari------
 //      $('#color option[value = tomato]').attr('disabled', 'disabled');
       $('#color option[value = steelblue]').hide();
       $('#color option[value = dimgrey]').hide();
